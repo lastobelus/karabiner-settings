@@ -46,7 +46,23 @@
     <item>
       <name>Single Key Press Space turns on "Home Row Arrow and Modifier Mode"</name>
       <identifier>remap.dvorak_homerow_mode_space_no_repeat</identifier>
-      <autogen>__KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_dvorak_homerow_mode, KeyCode::SPACE</autogen>
+      <block>
+        <elapsedtimesincelastreleased_greaterthan>Millisecond::RawValue::60</elapsedtimesincelastreleased_greaterthan>
+        <autogen>
+              __HoldingKeyToKey__
+              KeyCode::SPACE,
+
+              @begin
+              KeyCode::SPACE
+              @end
+
+              @begin
+              KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_dvorak_homerow_mode
+              @end
+
+              ThresholdMillisecond::RawValue::25,
+            </autogen>
+          </block>
       <block>
         <config_only>notsave.dvorak_homerow_mode</config_only>
         <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_LEFT,   Option::KEYTOKEY_BEFORE_KEYDOWN, KeyCode::VK_CONFIG_FORCE_ON_notsave_dvorak_homerow_arrows, Option::KEYTOKEY_AFTER_KEYUP, KeyCode::VK_CONFIG_FORCE_OFF_notsave_dvorak_homerow_arrows, </autogen>
@@ -56,6 +72,8 @@
         <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT,  Option::KEYTOKEY_BEFORE_KEYDOWN, KeyCode::VK_CONFIG_FORCE_ON_notsave_dvorak_homerow_arrows, Option::KEYTOKEY_AFTER_KEYUP, KeyCode::VK_CONFIG_FORCE_OFF_notsave_dvorak_homerow_arrows, </autogen>
       </block>
     </item>
+
+    
     <item>
       <name>[Option] A to Shift</name>
       <appendix>(+ When you press A only send Control+S)</appendix>
