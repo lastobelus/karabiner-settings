@@ -1,0 +1,3 @@
+These are my custom [karabiner](https://pqrs.org/osx/karabiner/index.html.en) settings.
+
+Currently this is a modification of the **Home Row Arrow and Modifier Mode** to support **Dvorak** keyboard layout as well as using some newer **Karabiner** settings to mostly eliminate the touch typing lag that using spacebar as a modifier caused in the original version of **Home Row Arrow and Modifier Mode**.
