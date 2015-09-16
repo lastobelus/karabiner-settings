@@ -8,7 +8,7 @@
       <appendix>Single Key Press Space turns on "Home Row Arrow and Modifier Mode"</appendix>
       <appendix>Then you can use JKIL as Left/Down/Up/Right.</appendix>
       <identifier vk_config="true">notsave.dvorak_homerow_mode</identifier>
-      <autogen>__ShowStatusMessage__ Home Row Arrow and Modifier Mode</autogen>
+      <autogen>__ShowStatusMessage__ Home Row Mode</autogen>
       <!-- Begin UO Mechanics -->
       <block>
         <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::EXTRA3, KeyCode::TAB, ModifierFlag::SHIFT_L</autogen>
@@ -47,7 +47,7 @@
       <name>Single Key Press Space turns on "Home Row Arrow and Modifier Mode"</name>
       <identifier>remap.dvorak_homerow_mode_space_no_repeat</identifier>
       <block>
-        <elapsedtimesincelastreleased_greaterthan>Millisecond::RawValue::60</elapsedtimesincelastreleased_greaterthan>
+        <elapsedtimesincelastreleased_greaterthan>Millisecond::RawValue::280</elapsedtimesincelastreleased_greaterthan>
         <autogen>
               __HoldingKeyToKey__
               KeyCode::SPACE,
@@ -60,7 +60,7 @@
               KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_dvorak_homerow_mode
               @end
 
-              ThresholdMillisecond::RawValue::25,
+              ThresholdMillisecond::RawValue::220,
             </autogen>
           </block>
       <block>
@@ -74,16 +74,17 @@
     </item>
 
     
+
     <item>
       <name>[Option] A to Shift</name>
-      <appendix>(+ When you press A only send Control+S)</appendix>
-      <identifier>option.dvorak_erow_mode_a_to_shift_select</identifier>
+      <appendix>(+ When you press A only send RightClick)</appendix>
+      <identifier>option.dvorak_homerow_mode_a_to_shift_select</identifier>
       <config_only>notsave.dvorak_homerow_mode</config_only>
       <block>
         <config_only>notsave.dvorak_homerow_arrows</config_only>
         <autogen>__KeyToKey__ KeyCode::A, KeyCode::SHIFT_L</autogen>
       </block>
-      <autogen>__KeyOverlaidModifier__ KeyCode::A, KeyCode::VK_LAZY_SHIFT_L, KeyCode::SEMICOLON, ModifierFlag::CONTROL_L</autogen>
+      <autogen>__KeyOverlaidModifier__ KeyCode::A, KeyCode::VK_LAZY_SHIFT_L, PointingButton::RIGHT</autogen>
     </item>
     <item>
       <name>[Option] S to Control</name>
