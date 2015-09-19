@@ -51,7 +51,7 @@
         <autogen>
               __HoldingKeyToKey__
               KeyCode::SPACE,
-
+              ModifierFlag::NONE,
               @begin
               KeyCode::SPACE
               @end
