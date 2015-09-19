@@ -243,4 +243,22 @@
       <autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::FORWARD_DELETE</autogen>
     </item>
   </item>
+  <item>
+    <name>Lastobelus' Chords (NOTE: for Dvorak)</name>
+    <item>
+      <name>D+F (e+u in dvorak) for (</name>
+      <identifier>remap.keyD_plus_keyF_for_open_square_bracket</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::D, KeyCode::F, KeyCode::KEY_9, ModifierFlag::SHIFT_L</autogen>
+    </item>
+    <item>
+      <name>J+K (h+t in dvorak) for [</name>
+      <identifier>remap.keyJ_plus_keyK_for_open_paren</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::J, KeyCode::K, KeyCode::MINUS</autogen>
+    </item>
+    <item>
+      <name>K+L (t+n in dvorak) for {</name>
+      <identifier>remap.keyK_plus_keyL_for_open_brace</identifier>
+      <autogen>__SimultaneousKeyPresses__ KeyCode::K, KeyCode::L, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+    </item>
+  </item>
 </root>
