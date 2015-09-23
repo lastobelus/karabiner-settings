@@ -292,6 +292,23 @@
       <identifier>remap.keyF_plus_keyJ_for_CURSOR_LEFT</identifier>
       <autogen>__SimultaneousKeyPresses__ KeyCode::F, KeyCode::J, KeyCode::CURSOR_LEFT</autogen>
     </item>
-    
+
+    <item>
+      <name>F2, F3, F4 => Cut, Copy, Paste</name>
+      <identifier>remap.function_key_cut_copy_paste</identifier>
+      <appendix>On some newer macs I can't get ~/Library/KeyBindings/DefaultKeyBinding.dict to work, so I'm reproducing some keybindings here</appendix>
+      <autogen>__KeyToKey__ KeyCode::F2, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F3, KeyCode::I, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F4, KeyCode::DOT, ModifierFlag::COMMAND_L</autogen>
+    </item>
+    <item>
+      <name>Cmd-Return to make a newline below current line and go to it</name>
+      <identifier>remap.command_return_to_insert_line</identifier>
+      <block>
+        <not>TEXTMATE</not>
+        <autogen>__KeyToKey__ KeyCode::RETURN, ModifierFlag::COMMAND_L, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L, KeyCode::RETURN</autogen>
+      </block>
+    </item>
   </item>
+
 </root>
