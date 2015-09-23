@@ -88,7 +88,7 @@
       <autogen>__KeyOverlaidModifier__ KeyCode::A, KeyCode::VK_LAZY_SHIFT_L, PointingButton::RIGHT</autogen>
     </item>
     <item>
-      <name>[Option] S to Control</name>
+      <name>[Option] S (O in dvorak) to Control</name>
       <appendix>(+ When you press S only send Command+X)</appendix>
       <identifier>option.dvorak_homerow_mode_s_to_control</identifier>
       <config_only>notsave.dvorak_homerow_mode</config_only>
@@ -99,7 +99,7 @@
       <autogen>__KeyOverlaidModifier__ KeyCode::S, KeyCode::VK_LAZY_CONTROL_L, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
     </item>
     <item>
-      <name>[Option] D to Option</name>
+      <name>[Option] D (E in dvorak) to Option</name>
       <appendix>(+ When you press D only send Command+C)</appendix>
       <identifier>option.dvorak_homerow_mode_d_to_option</identifier>
       <config_only>notsave.dvorak_homerow_mode</config_only>
@@ -149,6 +149,45 @@
       <identifier>option.dvorak_homerow_mode_u_o_to_delete_space</identifier>
       <config_only>notsave.dvorak_homerow_mode</config_only>
     </item>
+    <item>
+      <name>[Option] U to Backspace, O to forward delete</name>
+      <appendix>a simplification of the above setup</appendix>
+      <identifier>option.dvorak_homerow_mode_u_to_backspace</identifier>
+      <config_only>notsave.dvorak_homerow_mode</config_only>
+      <autogen>__KeyToKey__ KeyCode::U, KeyCode::DELETE</autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
+        KeyCode::V, ModifierFlag::CONTROL_L
+      </autogen>
+      <autogen>__KeyToKey__ KeyCode::O, KeyCode::FORWARD_DELETE</autogen>
+    </item>
+    <item>
+      <name>[Option] Cmd-ForwardDelete</name>
+      <identifier>option.dvorak_homerow_cmd_forward_delete</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::FORWARD_DELETE, ModifierFlag::COMMAND_L,
+        KeyCode::V, ModifierFlag::CONTROL_L,
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_dvorak_homerow_cmd_forward_delete
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::COMMAND_L,
+        KeyCode::V, ModifierFlag::CONTROL_L,
+        KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_dvorak_homerow_cmd_forward_fn_delete
+      </autogen>
+    </item>
+    <item hidden="true">
+      <identifier vk_config="true">notsave.dvorak_homerow_cmd_forward_delete</identifier>
+      <autogen>__ShowStatusMessage__ Cmd Forward Delete</autogen>
+    </item>
+    
+    <item hidden="true">
+      <identifier vk_config="true">notsave.dvorak_homerow_cmd_forward_fn_delete</identifier>
+      <autogen>__ShowStatusMessage__ Cmd FN Delete</autogen>
+    </item>
+    
     <item>
       <name>[Option] ; to Return</name>
       <identifier>option.dvorak_homerow_mode_return</identifier>
